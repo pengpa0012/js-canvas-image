@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Canvas Image</title>
+  <script src="./script.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div>
+    <div class="max-w-[700px] my-12 mx-auto flex items-center justify-between">
+      <input type="file" class="img-file" />
+      <div class="flex items-center gap-3">
+        <select class="filters">
+          <option>Filter</option>
+          <option value="1">Filter</option>
+          <option value="2">Filter</option>
+        </select>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+  </div>
+</body>
+</html>
