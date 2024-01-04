@@ -6,5 +6,15 @@ const removeBtn = document.querySelector(".remove-btn")
 
 
 imgFile.addEventListener("input", (e) => {
-  console.log(e.target.value)
+  const input = e.target
+  if (input.files && input.files[0]) {
+    const blob = window.URL.createObjectURL(input.files[0])
+    const myImage = new Image()
+    myImage.src = blob
+    console.log(ratio)
+    myImage.onload = function () {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx.drawImage(myImage, 0, 0, canvas.width, canvas.height) 
+    };
+ }
 })
